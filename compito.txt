@@ -1,0 +1,202 @@
+# VERIFICA: Fondamenti di version control
+
+Informazioni sul GitFlow utilizzato:
+
+    - branch main
+        branch da cui vengono staccate le release:
+        contiene una copia sempre consistente del progetto (il programma funziona correttamente)
+
+    - branch develop
+        branch di sviluppo da cui partono e su cui convergono i feature branch:
+        contiene tutte le feature il cui sviluppo è stato completato (il programma funziona correttamente)
+
+    - feature branch
+        branch di sviluppo su cui vengono implementate le nuove features;
+        i feature branch vanno allineati su origin (saranno utilizzati per la valutazione),
+        e possono eventualmente essere in stato inconsistente (il programma non necessariamente funziona)
+
+    - release branch
+        rappresentano una versione deliverable (di produzione) del programma
+
+    - alternative branch
+        rappresentano una versione alternativa del programma: vengono staccati da main e con esso rimangono allineati
+
+Punti di attenzione: - i release branch sono rami 'congelati' (non effettuare commit su questi branch) - i feature branch vanno sempre staccati da 'develop': le commit di nuove funzionalità vanno effettuate sui feature branch - il branch di develop è il branch su cui verranno fatti convergere i feature branch (con la merge): non effettuare commit
+sul branch di develop
+
+
+# SPRINT 1
+
+Obiettivo dello sprint: implementare nell'applicazione le seguenti funzionalità:
+1- Arcade
+2- App per lavorare
+3- App per sviluppare
+4- Categorie
+5- Classifiche
+
+## Step 1 (3 punti)
+
+  Fila 1:
+    nome branch 'feature/s01-arcade'
+    pagina di dettaglio 'arcade.html'
+    Titolo: "Elenco videogiochi"
+    Sottotitolo: "collaboratively incentivize accurate web-readiness"
+
+  Fila 2:
+    nome branch 'feature/s01-work'
+    pagina di dettaglio 'work.html'
+    Titolo: "Elenco applicazioni di produttivià"
+    Sottotitolo: "phosfluorescently embrace client-centric outsourcing"
+
+  Fila 3: 
+    nome branch 'feature/s01-develop'
+    pagina di dettaglio 'develop.html'
+    Titolo: "Elenco applicazioni per sviluppare"
+    Sottotitolo: "completely initiate interactive methodologies"
+
+  Fila 4: 
+    nome branch 'feature/s01-categories'
+    pagina di dettaglio 'categories.html'
+    Titolo: "Elenco categorie"
+    Sottotitolo: "globally foster innovative action items"
+
+  Fila 5: 
+    nome branch 'feature/s01-hits'
+    pagina di dettaglio 'hits.html'
+    Titolo: "Classifiche"
+    Sottotitolo: "monotonectally predominate seamless process improvements"
+
+  - Creare il branch indicato sopra (corrispondente alla fila) partendo da 'develop' ed effettuare gli sviluppi su questo branch
+  - In 'index.html' sostituire la voce di esempio del menù con una voce del menù corrispondente alla fila,
+    che linka alla pagina di dettaglio relativa
+  - Creare il file della pagina di dettaglio partendo dal file 'template.html' (copiando e NON cancellando il file template), 
+    personalizzando titolo e sotto titolo della pagina
+  - Verificare il funzionamento dell'applicazione (dall'index deve essere raggiungibile la nuova pagina 
+    e da essa deve essere raggiungibile l'index)
+  - Fare la commit di tutte le modifiche e la push del nuovo branch su origin
+  - ATTENZIONE: verificare che il branch su origin sia stato effettivamente creato correttamente, 
+    la valutazione verrà fatta esclusivamente su origin. Ricordati le regole di un 'buon commit'.
+
+## Step 2 (4 punti)
+
+  - Spostarsi sul branch 'develop'
+  - Effettuare un riallineamento da origin (git pull)
+  - Verificare che l'app funzioni correttamente, in caso contrario correggere eventuali errori su index.html
+  - effettuare su 'develop' il merge del proprio feature branch
+  - correggere eventuali conflitti mantenedo l'ordine delle voci del menu
+  - effettuare il push di 'develop' su origin
+  - ATTENZIONE: verificare che su origin il push sia stato effettuato correttamente
+
+## Team sync (3 punti per ciascun membro del team): rilascio prima versione
+
+  - partendo dal branch 'develop' effettuare una pull
+  - verificare di avere in develop l'applicazione con tutte le features sviluppate in modo completo dal team
+  - allineare il branch 'main' a 'develop' (quindi spostarsi su 'main' e fare la merge di 'develop')
+  - verificare che sul branch 'main' il programma funzioni ancora correttamente
+  - staccare da 'main' un release branch chiamato 'release/1.0'
+  - effettuare la push su origin del nuovo release branch
+
+# SPRINT 2
+
+Obiettivo dello sprint: nuove vesti grafiche e contenuti aggiornati
+
+## Step 3 (2 punti)
+
+  Fila 1:
+    nome branch 'feature/s02-arcade'
+    testo da aggiungere:
+      The missions blow them away. A six-sigma product line touches base on an established growth year, 
+      so a price point will not ride the wave of transition phases. Having first verified that task-driven 
+      executives ramp up progress on the transition phase, a careful examination of dialogue reveals that 
+      customer bases are excellence. Surely, we can conclude that the extensible tangents indicate 
+      that most sophisticated guiding principles (as you will hear at the next shareholder's meeting) 
+      knock your socks off.
+
+  Fila 2:
+    nome branch 'feature/s02-work'
+    testo da aggiungere:
+      Constraints agree to disagree on the challenges, notwithstanding that opportunities provide an indication of empowerment.
+      A take-home lesson is that a standard paper trail leads to win-win deliverables. 
+      We are convinced that strategies take the issue off-line.
+
+  Fila 3: 
+    nome branch 'feature/s02-develop'
+    testo da aggiungere:
+      In order to obtain a major player, we took a close look at headcount readjustment to understand what it means. 
+      A major stretch goal for this fiscal quarter is the mind-blowing product lines. 
+      In order to obtain lightweight workgroups, we took a close look at open-ended guesstimates to understand what they mean.
+
+  Fila 4: 
+    nome branch 'feature/s02-categories'
+    testo da aggiungere:
+      A goal evolves into enterprise alliances, which leads us to believe that a quality-oriented team engenders environments. 
+      The team-building leadership positions have a dealer channel. A revolutionary customer rides the wave of customer focus. 
+      A 90% solution fast-tracks the dealer channels, so design-led critical paths (of course) empower revolutionary human 
+      resource allocations.
+
+  Fila 5: 
+    nome branch 'feature/s02-hits'
+    testo da aggiungere:
+      A ubiquitous red flag eventually syncs up with zero-defect-generation price points. 
+      A fiscal committee effortlessly signs up for an extensible deliverable. A new-generation 
+      executive has the synergies. Enabling benefits interface with the mobile staffing. 
+
+  - partendo dal branch 'develop': effettuare un riallineamento da origin (git pull)
+  - Creare il branch indicato sopra partendo da 'develop' ed effettuare gli sviluppi su questo branch
+  - Nel file di dettaglio creato durante il primo sprint aggiungere un nuovo paragrafo in fondo con il testo indicato sopra (sempre relativo alla fila)
+  - Verificare il funzionamento dell'applicazione (dall'index deve essere raggiungibile la nuova pagina e da essa deve essere raggiungibile l'index)
+  - Fare la commit di tutte le modifiche e la push del nuovo branch su origin
+  - ATTENZIONE: verificare che il branch su origin sia stato effettivamente creato correttamente, la valutazione verrà fatta esclusivamente su origin
+  - Spostarsi sul branch 'develop'
+  - Effettuare un riallineamento da origin (git pull)
+  - effettuare su 'develop' il merge del proprio feature branch
+  - effettuare il push di 'develop' su origin
+  - ATTENZIONE: verificare che su origin il push sia stato effettuato correttamente
+
+## Step 4 (3 punti)
+
+  Fila 1: aquamarine
+  Fila 2: burlywood
+  Fila 3: coral
+  Fila 4: crimson
+  Fila 5: indigo
+
+
+  - obiettivo di questo task è di creare una veste grafica alternativa per il prodotto, verrà utilizzato un flow alternativo
+  - partendo da 'main' staccare un nuovo branch 'alternative/{nome colore assegnato}' [Esempio: alternative/aquamarine]
+  - spostarsi sul nuovo branch e cambiare il colore di sfondo in 'style.css' con il colore assegnato
+  - verificare il funzionamento dell'applicazione con il nuovo colore di sfondo
+  - effettuare commit della modifica e push del nuovo branch su origin
+  - partendo da 'alternative/{nome colore}' staccare una release alternativa 'release/1.0-{nome colore}' (push anche su origin)
+
+## Team sync (3 punti per ciascun membro del team): rilascio seconda versione
+
+  - partendo dal branch 'develop' effettuare una pull
+  - verificare di avere in develop l'applicazione con tutte le features sviluppate in modo completo dal team
+  - allineare il branch 'main' a 'develop' (quindi spostarsi su 'main' e fare la merge di 'develop')
+  - verificare che sul branch 'main' il programma funzioni ancora correttamente
+  - staccare da 'main' un release branch chiamato 'release/2.0'
+  - effettuare la push su origin del nuovo release branch
+
+## Step 4 (3 punti)
+
+  - riallineare il branch 'main' (git pull)
+  - spostarsi sul proprio alternative branch e riallinearlo a main (git merge)
+  - verificare che le ultime implementazioni dell'applicazione siano integrate, insieme al colore di sfondo alternativo
+  - rilasciare una nuova versione (staccando un nuovo branch) 'release/2.0-{nome colore}' (push anche su origin)
+
+# Teoria (9 punti - 3 per ogni domanda)
+
+- sul branch 'main', creare un nuovo file '<nome>-<cognome>.txt' utilizzando il seguente template:
+  Nome: 
+  Cognome: 
+  Fila n.: 
+
+  Rispondere alle seguenti domande:
+
+    1. Che cos'è e come funziona la staging area
+    2. Cos'è una commit?
+    3. Cosa sono i branch, che cos'è la HEAD?
+
+- effettuare il commit ed il push delle modifiche
+- uploadare il file sul sito della FAD (si può fare anche in un secondo momento, ma è necessario per attivare la valutazione)
