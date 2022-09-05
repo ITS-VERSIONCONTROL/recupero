@@ -1,0 +1,19 @@
+Nome: Andrea
+Cognome: Reho
+Fila n.: 1
+
+1. Che cos'è e come funziona la staging area?
+
+    La staging area la definirei come l'area che viene presa in considerazione 
+    alla quale deve essere committata (commentata) per poi venir pushata (inviata all'origin)
+    
+
+2. Cos'è una commit?
+
+    il commit è letteralmente un commento il cui descrive quali cambiamenti sono stati fatti
+    alcuni commenti possono pure essere più lungi e possono essere composta da un'intestazione
+
+3. Cosa sono i branch, che cos'è la HEAD?
+
+    i branch sono le ramificazioni del nosto git, l'head indica la nostra posizione 
+    nella ramificazione del nostro git
