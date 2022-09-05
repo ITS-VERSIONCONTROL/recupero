@@ -1,0 +1,41 @@
+Nome: Alessandro
+Cognome: Scisci
+Fila n.: 2
+
+--------------------------------------------------------------------------
+
+1. Che cos'è e come funziona la staging area
+
+E' un'area che utilizziamo in quelle situazioni in cui abbiamo effettuato dei progressi,
+vogliamo ricordarci di cosa abbiamo fatto, ma non siamo ancora pronti per effettuarne una commit.
+E' una terra di mezzo tra quello che ho appena fatto sui miei file (la working directory) e quello
+che ho committato per ultimo (la commit HEAD).
+E' un'area intermedia in cui git si prepara a effettuare un commit.
+Tutte le volte che chiamiamo il comando git add aggiungiamo il file alla staging area.
+Comunica a git che voglio includere gli aggiornamenti ad un particolare file nella prossima commit.
+Quest'operazione non modifica effettivamente il repository in nessuna maniera permanente,
+infatti i cambiamenti non vengono registrati fintanto che non effettuiamo la commit.
+
+--------------------------------------------------------------------------
+
+2. Cos'è una commit?
+
+Una commit è una storicizzazione di una modifica atomica che ho effettuato. Questa modifica deve essere esplicitamente comunicata a git aggiungendola alla staging area prima di effettuarla.
+Di buona norma la si effettua solo quando il programma compila e su un elemento circoscritto per poter facilmente ritrovare la modifica nel caso di bug o errori in seguito.
+Ho fatto una modifica -> funziona  -> la storicizzo = la archivio e rendo disponibile sul repository locale e ne salvo un'istantanea nella history.
+
+Questa operazione non salva automaticamente il file sul server remoto.
+
+
+--------------------------------------------------------------------------
+
+3. Cosa sono i branch, che cos'è la HEAD?
+
+Un branch rappresenta una linea indipendente dello sviluppo del software, uno dei rami dell'albero del progetto. Ci servono per avere a disposizione una sorta di
+nuove working directory, staging area e history dedicate ad una funzionalità o release.
+Le nuove commit effettuate su un branch sono registrate sulla history di quel branch specifico.
+Da qui deriva il termine sbrenchare, cioè cominciare un nuovo ramo di sviluppo a partire da uno già esistente.
+
+La HEAD è il puntatore che indica dove io stia guardando nella history in un particolare momento.
+E' una referenza simbolica alla mia "testa" che punta appunto in qualsiasi luogo in cui io mi trovi nella storia delle commit.
+E' di solito un puntatore verso un branch che all'aggiunta di nuove commit si sposta in avanti
