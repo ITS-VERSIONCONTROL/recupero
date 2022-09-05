@@ -1,0 +1,18 @@
+  Nome: Simone
+  Cognome: Zammarco
+  Fila n.: 40.000
+
+  Rispondere alle seguenti domande:
+
+    1. Che cos'è e come funziona la staging area
+
+        lo staging area permette su di un indirizzo provvisorio di creare un clone del proprio sito in un ambiente di prova, dove si può applicare modifiche o aggiornarnamenti senza essere visibili online. 
+
+    2. Cos'è una commit?
+
+        la commit è un comando che permette di aggiungere, rimuovere e modificare i file delle repository
+
+    3. Cosa sono i branch, che cos'è la HEAD?
+
+        i branch sono delle ramificazioni che sono dentro alle repositery, il HEAD serve per capire qual è il branch corrente
+
